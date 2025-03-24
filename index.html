@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Rifas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rifas do Deni e da Jenny</h1>
+        <h2>Bem-vindo ao nosso sistema de rifas!</h2>
+        <div class="escopo">
+            <div class="questionario">
+                <h2>Participantes:</h2>
+                <input type="text" id="nome" placeholder="Nome do participante">
+                <input type="text" id="telefone" placeholder="Telefone">
+                <input type="text" id="endereco" placeholder="Endereço">
+            </div>
+            <div class="buttons__sorteio">
+                <button class="btn" onclick="realizarSorteio()">Realizar Sorteio</button>
+                <button class="btn" onclick="confirmarCompra()">Confirmar Compra</button>
+            </div>
+        </div>
+        <button class="btn btn-red" onclick="resetarBanco()">Resetar Rifas</button>
+        <table id="tabelaRifas" class="tabela"></table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</body>
+</html>
