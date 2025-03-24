@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -86,3 +87,93 @@ th, td {
     color: white;
 }
 
+=======
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.escopo {
+    display: flex;
+    justify-content: row;
+    margin: 0;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.btn-red {
+    background-color: red;
+}
+.btn-red:hover {
+    background-color: darkred;
+}
+
+.tabela {
+    padding: 50;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+th, td {
+    width: 120px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.disponivel {
+    background-color: green;
+    color: white;
+}
+.ocupado {
+    background-color: red;
+    color: rgb(231, 10, 10);
+}
+.selecionado {
+    background-color: #99ec899d;
+    background-color: gray !important;
+    color: white;
+}
+.comprada {
+    background-color: red !important;
+    color: white;
+}
+
+>>>>>>> code
