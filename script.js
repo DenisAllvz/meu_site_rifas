@@ -1,6 +1,3 @@
-
-require('dotenv').config();
-
 let totalRifas = 100;
 let participantes = JSON.parse(localStorage.getItem("rifas")) || [];
 let selecionadas = [];
@@ -123,8 +120,8 @@ const DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v
 const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
 function loadCredentials() {
-    const CLIENT_ID = process.env.CLIENT_ID;
-    const API_KEY = process.env.API_KEY;
+    const CLIENT_ID = '997691138493-3s6goek90d6ohucnn1t9960ek731psv8.apps.googleusercontent.com';
+    const API_KEY = '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';
 
     initClient(CLIENT_ID, API_KEY);
 }
