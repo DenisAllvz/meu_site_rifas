@@ -14,12 +14,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const analytics = firebase.analytics();
 
-// Seu código restante aqui...
-
-
-// Seu código restante aqui...
-
-
 let totalRifas = 100;
 let participantes = [];
 let selecionadas = [];

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Outras tags -->
+        <meta name="firebase-api-key" content="AIzaSyD9qyPvsJnIzVaU_r9-aSOYi_UYvhNAdF8">
+        <meta name="firebase-auth-domain" content="rifas-banco-de-dados.firebaseapp.com">
+        <meta name="firebase-project-id" content="rifas-banco-de-dados">
+        <meta name="firebase-storage-bucket" content="rifas-banco-de-dados.firebasestorage.app">
+        <meta name="firebase-messaging-sender-id" content="360627830952">
+        <meta name="firebase-app-id" content="1:360627830952:web:400bddf555ebbf12f9029d">
+        <meta name="firebase-measurement-id" content="G-W54YZW5JSR">
+      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador de Rifas</title>
@@ -9,17 +18,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-    <script>
-        window.env = {
-            FIREBASE_API_KEY: "${FIREBASE_API_KEY}",
-            FIREBASE_AUTH_DOMAIN: "${FIREBASE_AUTH_DOMAIN}",
-            FIREBASE_PROJECT_ID: "${FIREBASE_PROJECT_ID}",
-            FIREBASE_STORAGE_BUCKET: "${FIREBASE_STORAGE_BUCKET}",
-            FIREBASE_MESSAGING_SENDER_ID: "${FIREBASE_MESSAGING_SENDER_ID}",
-            FIREBASE_APP_ID: "${FIREBASE_APP_ID}",
-            FIREBASE_MEASUREMENT_ID: "${FIREBASE_MEASUREMENT_ID}"
-        };
-    </script>
 </head>
 <body>
     <div class="container">
@@ -38,9 +36,6 @@
         <div class="buttons__sorteio">
             <button class="btn btn-highlight" onclick="realizarSorteio()">Realizar Sorteio</button>
             <button class="btn btn-highlight" onclick="confirmarCompra()">Confirmar Compra</button>
-        </div>
-        <div class="buttons__resetar">
-            <button class="btn btn-red" onclick="resetarBanco()">Resetar Rifas</button>
         </div>
         <table id="tabelaRifas" class="tabela"></table>
     </div>
