@@ -1,179 +1,103 @@
-<<<<<<< HEAD
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f8f8;
-}
 .container {
-    max-width: 1000px;
-    margin: 50px auto;
-    background: rgb(255, 255, 255);
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-input, button {
-    padding: 10px;
-    margin: 10px 0;
-    width: 90%;
+    text-align: center;
 }
 
-.escopo {
+.header {
     display: flex;
-    justify-content: row;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
-button {
-    background-color: #28a745;
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3ac410; /* Green */
+}
+
+.btn-highlight {
+    background-color: #4CAF50; /* Green */
     color: white;
     border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #218838;
-}
-.btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
     padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
 }
-.btn:hover {
-    background-color: #0056b3;
+
+.btn-highlight:hover {
+    background-color: #45a049;
 }
+
+.btn-highlight:active {
+    background-color: #45a049;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
 .btn-red {
-    background-color: red;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
 }
+
 .btn-red:hover {
-    background-color: darkred;
+    background-color: #e53935;
+}
+
+.btn-red:active {
+    background-color: #e53935;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.buttons__sorteio {
+    margin-top: 20px;
+}
+
+.buttons__resetar {
+    margin-top: 20px;
 }
 
 .tabela {
-    padding: 50;
-    margin: 20px;
-}
-
-table {
     width: 100%;
-    margin: 10px auto;
     border-collapse: collapse;
+    margin-top: 20px;
 }
-th, td {
-    width: 120px;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 10px;
+
+.tabela td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    cursor: pointer;
 }
-.disponivel {
-    background-color: green;
-    color: white;
-}
-.ocupado {
-    background-color: red;
-    color: rgb(231, 10, 10);
-}
-.selecionado {
-    background-color: #99ec899d;
-    background-color: gray !important;
-    color: white;
-}
-.comprada {
-    background-color: red !important;
+
+.tabela .comprada {
+    background-color: #f44336; /* Red */
     color: white;
 }
 
-=======
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f8f8;
-}
-.container {
-    max-width: 1000px;
-    margin: 50px auto;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-input, button {
-    padding: 10px;
-    margin: 10px 0;
-    width: 90%;
-}
-
-.escopo {
-    display: flex;
-    justify-content: row;
-    margin: 0;
-}
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #218838;
-}
-.btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-.btn-red {
-    background-color: red;
-}
-.btn-red:hover {
-    background-color: darkred;
-}
-
-.tabela {
-    padding: 50;
-    margin: 20px;
-}
-
-table {
-    width: 100%;
-    margin: 10px auto;
-    border-collapse: collapse;
-}
-th, td {
-    width: 120px;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-.disponivel {
-    background-color: green;
-    color: white;
-}
-.ocupado {
-    background-color: red;
-    color: rgb(231, 10, 10);
-}
-.selecionado {
-    background-color: #99ec899d;
-    background-color: gray !important;
-    color: white;
-}
-.comprada {
-    background-color: red !important;
+.tabela .disponivel {
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
->>>>>>> code
+.tabela .selecionado {
+    background-color: #ffeb3b; /* Yellow */
+    color: black;
+}

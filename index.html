@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador de Rifas</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://apis.google.com/js/api.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Rifas do Deni e da Jenny</h1>
+        <div class="header">
+            <h1 class="title">Rifas do Deni e da Jenny</h1>
+        </div>
         <h2>Bem-vindo ao nosso sistema de rifas!</h2>
         <div class="escopo">
             <div class="questionario">
@@ -18,15 +19,16 @@
                 <input type="text" id="telefone" placeholder="Telefone">
                 <input type="text" id="endereco" placeholder="Endereço">
             </div>
-            <div class="buttons__sorteio">
-                <button class="btn" onclick="realizarSorteio()">Realizar Sorteio</button>
-                <button class="btn" onclick="confirmarCompra()">Confirmar Compra</button>
-            </div>
         </div>
-        <button class="btn btn-red" onclick="resetarBanco()">Resetar Rifas</button>
+        <div class="buttons__sorteio">
+            <button class="btn btn-highlight" onclick="realizarSorteio()">Realizar Sorteio</button>
+            <button class="btn btn-highlight" onclick="confirmarCompra()">Confirmar Compra</button>
+        </div>
+        <div class="buttons__resetar">
+            <button class="btn btn-red" onclick="resetarBanco()">Resetar Rifas</button>
+        </div>
         <table id="tabelaRifas" class="tabela"></table>
     </div>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </body>
 </html>

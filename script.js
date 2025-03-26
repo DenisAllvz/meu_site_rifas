@@ -1,7 +1,6 @@
 let totalRifas = 100;
 let participantes = JSON.parse(localStorage.getItem("rifas")) || [];
 let selecionadas = [];
-let gapiInitialized = false;
 
 function gerarNumeroRifa() {
     if (selecionadas.length === 0) {
@@ -73,9 +72,6 @@ function confirmarCompra() {
         };
 
         participantes.push(participante);
-        if (gapiInitialized) {
-            appendDataToSheet([nome, telefone, endereco, numeroRifa]);
-        }
     });
 
     localStorage.setItem("rifas", JSON.stringify(participantes));
@@ -100,9 +96,6 @@ function realizarSorteio() {
 
     let rifaSorteada = participantes[Math.floor(Math.random() * participantes.length)];
     alert(`A rifa sorteada foi: ${rifaSorteada.numeroRifa}, Nome: ${rifaSorteada.nome}`);
-    if (gapiInitialized) {
-        appendDataToSheet([rifaSorteada.nome, rifaSorteada.telefone, rifaSorteada.endereco, rifaSorteada.numeroRifa]);
-    }
     atualizarLista();
 }
 
@@ -116,52 +109,6 @@ function limparCampos() {
     document.getElementById('endereco').value = '';
 }
 
-const DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
-
-function loadCredentials() {
-    const CLIENT_ID = '997691138493-3s6goek90d6ohucnn1t9960ek731psv8.apps.googleusercontent.com';
-    const API_KEY = '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';
-
-    initClient(CLIENT_ID, API_KEY);
-}
-
-function initClient(CLIENT_ID, API_KEY) {
-    gapi.load('client:auth2', () => {
-        gapi.auth2.init({ client_id: CLIENT_ID }).then(() => {
-            console.log("Google Auth Initialized");
-            gapi.client.init({
-                apiKey: API_KEY,
-                clientId: CLIENT_ID,
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES
-            }).then(() => {
-                gapi.auth2.getAuthInstance().signIn().then(() => {
-                    gapiInitialized = true;
-                });
-            });
-        }).catch(err => console.error("Erro na inicialização do Google Auth", err));
-    });
-}
-
-function appendDataToSheet(data) {
-    const params = {
-        spreadsheetId: '11r-ifeOa8hmxV4OmDTF2dBtdQ-qD26x04mejYPDtuLA',
-        range: 'Sheet1!A1',
-        valueInputOption: 'RAW',
-        insertDataOption: 'INSERT_ROWS',
-    };
-
-    const valueRangeBody = {
-        "values": [data]
-    };
-
-    gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody).then((response) => {
-        console.log(response.result);
-    });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-    loadCredentials();
     atualizarLista();
 });
